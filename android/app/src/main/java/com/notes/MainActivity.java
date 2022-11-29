@@ -1,8 +1,10 @@
 package com.notes;
-import android.os.Bundle;
+
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.ReactRootView;
+import android.os.Bundle;
+
 
 public class MainActivity extends ReactActivity {
 
@@ -12,8 +14,12 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "NotesScreen";
+    return "Notes";
   }
+   @Override
+    protected void onCreate(Bundle savedInstanceState) {
+      super.onCreate(null);
+    }
 
   /**
    * Returns the instance of the {@link ReactActivityDelegate}. There the RootView is created and
@@ -23,10 +29,6 @@ public class MainActivity extends ReactActivity {
   @Override
   protected ReactActivityDelegate createReactActivityDelegate() {
     return new MainActivityDelegate(this, getMainComponentName());
-  }
-  @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(null);
   }
 
   public static class MainActivityDelegate extends ReactActivityDelegate {

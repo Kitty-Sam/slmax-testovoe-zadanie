@@ -39,5 +39,8 @@ export const styles = StyleSheet.create<AddNoteStyleType>({
     borderRadius: 10,
     paddingHorizontal: 5,
     paddingVertical: 5,
+    position: 'absolute',
+    right: 18,
+    bottom: 0,
   },
 });
