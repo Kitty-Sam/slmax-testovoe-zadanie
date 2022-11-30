@@ -1,4 +1,4 @@
-import { NoteType } from '../../components/AddNote/AddNote';
+import { NoteType } from '../../screens/AddNoteItemScreen/AddNoteItemScreen';
 
 export enum NoteActions {
   ADD_NOTE = 'ADD_NOTE',

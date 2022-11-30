@@ -1,20 +1,27 @@
 import { StyleSheet, TextStyle, ViewStyle } from 'react-native';
 
 export type NoteStyleType = {
-  container: ViewStyle;
-  text: TextStyle;
+  dropdownContainer: ViewStyle;
+  dropdownBlock: ViewStyle;
+  dropdownNativeContainer: ViewStyle;
+  removeText: TextStyle;
 };
 
 export const styles = StyleSheet.create<NoteStyleType>({
-  container: {
-    borderColor: 'grey',
-    borderWidth: 1,
-    borderRadius: 4,
+  dropdownContainer: {
     width: '90%',
-    height: 40,
     marginVertical: 8,
   },
-  text: {
-    textAlign: 'center',
+  removeText: {
+    marginHorizontal: 10,
+  },
+  dropdownNativeContainer: {
+    height: 400,
+    padding: 20,
+  },
+  dropdownBlock: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });

@@ -23,7 +23,10 @@ export const NotesScreen: FC<NotesScreenPropsType> = props => {
   return (
     <SafeAreaView style={styles.root}>
       <Button title={'add new note'} onPress={() => navigation.navigate(NotesNavigationName.ADD_NOTE_ITEM)} />
-      <FlatList data={notes} renderItem={({ item }) => <Note note={item} key={item.id} removeNote={removeNote} />} />
+      <FlatList
+        data={notes}
+        renderItem={({ item, index }) => <Note note={item} key={item.id} removeNote={removeNote} index={index} />}
+      />
     </SafeAreaView>
   );
 };

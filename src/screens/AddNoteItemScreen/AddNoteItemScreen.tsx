@@ -53,6 +53,7 @@ export const AddNoteItemScreen: FC<AddNoteItemScreenPropsType> = _props => {
           value={createdNoteTitle}
           onChangeText={setCreatedNoteTitle}
           style={styles.titleInput}
+          selectTextOnFocus={true}
         />
         <TextInput
           placeholder={'Текст описание'}
@@ -60,9 +61,10 @@ export const AddNoteItemScreen: FC<AddNoteItemScreenPropsType> = _props => {
           onChangeText={setCreatedNoteText}
           style={styles.textInput}
           multiline={true}
+          selectTextOnFocus={true}
         />
       </View>
-      <View style={{ flexDirection: 'row' }}>
+      <View style={styles.buttonsContainer}>
         <Button title={'add'} onPress={() => addNewNote()} />
         <Button
           color={'red'}

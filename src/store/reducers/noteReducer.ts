@@ -2,7 +2,20 @@ import { addNewNoteAC, fetchNotesAC, NoteActions, removeNoteAC } from '../action
 import { NoteType } from '../../screens/AddNoteItemScreen/AddNoteItemScreen';
 
 const initialState: initialStateType = {
-  notes: [],
+  notes: [
+    {
+      id: '1234',
+      header: 'New Note',
+      text: 'I should create new note and I should create new note',
+      data: '1234',
+    },
+    {
+      id: '3456',
+      header: 'New Note Again',
+      text: 'I should create new note and I should create new note',
+      data: '3456',
+    },
+  ],
 };
 
 type initialStateType = {
@@ -25,7 +38,7 @@ export const noteReducer = (state: initialStateType = initialState, action: Acti
           };
           return {
             ...state,
-            notes: [newNote, ...state.notes],
+            notes: [...state.notes, newNote],
           };
         }
       }
