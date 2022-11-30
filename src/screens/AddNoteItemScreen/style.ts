@@ -5,9 +5,11 @@ export type AddNoteStyleType = {
   textInput: TextStyle;
   noteContainer: ViewStyle;
   buttonContainer: ViewStyle;
+  root: ViewStyle;
 };
 
 export const styles = StyleSheet.create<AddNoteStyleType>({
+  root: { flex: 1, alignItems: 'center', justifyContent: 'center' },
   noteContainer: {
     width: 300,
     borderWidth: 1,
@@ -25,12 +27,9 @@ export const styles = StyleSheet.create<AddNoteStyleType>({
     padding: 10,
   },
   textInput: {
-    borderBottomColor: 'grey',
-    borderBottomWidth: 1,
     width: '90%',
     borderRadius: 4,
     padding: 10,
-    height: 50,
     marginVertical: 10,
   },
   buttonContainer: {

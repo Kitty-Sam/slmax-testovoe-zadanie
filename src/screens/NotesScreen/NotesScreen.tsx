@@ -1,13 +1,17 @@
-import React from 'react';
-import { FlatList, SafeAreaView, View } from 'react-native';
+import React, { FC } from 'react';
+import { Button, FlatList, SafeAreaView } from 'react-native';
 import { styles } from './style';
-import { AddNote } from '../../components/AddNote/AddNote';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchNotes } from '../../store/selectors/notesSelectors';
 import { Note } from '../../components/Note/Note';
 import { removeNoteAC } from '../../store/actions/noteActions';
+import { NotesNavigationName, NotesStackParamList } from '../../navigation/NotesStack/notesStack';
+import { StackScreenNavigationProps } from '../../navigation/type';
 
-export const NotesScreen = () => {
+export type NotesScreenPropsType = StackScreenNavigationProps<NotesNavigationName.NOTES, NotesStackParamList>;
+
+export const NotesScreen: FC<NotesScreenPropsType> = props => {
+  const { navigation } = props;
   const notes = useSelector(fetchNotes);
 
   const dispatch = useDispatch();
@@ -18,10 +22,8 @@ export const NotesScreen = () => {
 
   return (
     <SafeAreaView style={styles.root}>
+      <Button title={'add new note'} onPress={() => navigation.navigate(NotesNavigationName.ADD_NOTE_ITEM)} />
       <FlatList data={notes} renderItem={({ item }) => <Note note={item} key={item.id} removeNote={removeNote} />} />
-      <View style={{ position: 'absolute', bottom: 36 }}>
-        <AddNote />
-      </View>
     </SafeAreaView>
   );
 };

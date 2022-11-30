@@ -1,5 +1,5 @@
-import { NoteType } from '../../components/AddNote/AddNote';
 import { addNewNoteAC, fetchNotesAC, NoteActions, removeNoteAC } from '../actions/noteActions';
+import { NoteType } from '../../screens/AddNoteItemScreen/AddNoteItemScreen';
 
 const initialState: initialStateType = {
   notes: [],
