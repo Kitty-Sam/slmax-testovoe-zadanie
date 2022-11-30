@@ -6,14 +6,8 @@ const initialState: initialStateType = {
     {
       id: '1234',
       header: 'New Note',
-      text: 'I should create new note and I should create new note',
-      data: '1234',
-    },
-    {
-      id: '3456',
-      header: 'New Note Again',
-      text: 'I should create new note and I should create new note',
-      data: '3456',
+      text: 'I should create new note',
+      data: new Date(),
     },
   ],
 };

@@ -12,7 +12,7 @@ export type NoteType = {
   id: string;
   header: string;
   text: string;
-  data: string;
+  data: Date;
 };
 
 export type AddNoteItemScreenPropsType = StackScreenNavigationProps<
@@ -37,7 +37,7 @@ export const AddNoteItemScreen: FC<AddNoteItemScreenPropsType> = _props => {
         id: String(Date.now()),
         header: createdNoteTitle,
         text: createdNoteText,
-        data: String(Date.now()),
+        data: new Date(),
       }),
     );
     setCreatedNoteText('');

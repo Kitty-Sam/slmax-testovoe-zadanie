@@ -6,6 +6,7 @@ export type AddNoteStyleType = {
   noteContainer: ViewStyle;
   buttonContainer: ViewStyle;
   root: ViewStyle;
+  buttonsContainer: ViewStyle;
 };
 
 export const styles = StyleSheet.create<AddNoteStyleType>({
@@ -41,5 +42,11 @@ export const styles = StyleSheet.create<AddNoteStyleType>({
     position: 'absolute',
     right: 18,
     bottom: 0,
+  },
+  buttonsContainer: {
+    flexDirection: 'row',
+    marginVertical: 4,
+    width: 200,
+    justifyContent: 'space-around',
   },
 });

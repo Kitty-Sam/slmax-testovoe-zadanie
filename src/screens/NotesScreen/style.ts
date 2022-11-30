@@ -2,6 +2,7 @@ import { StyleSheet, ViewStyle } from 'react-native';
 
 export type NotesScreenStyleType = {
   root: ViewStyle;
+  buttonContainer: ViewStyle;
 };
 
 export const styles = StyleSheet.create<NotesScreenStyleType>({
@@ -9,5 +10,8 @@ export const styles = StyleSheet.create<NotesScreenStyleType>({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  buttonContainer: {
+    marginVertical: 10,
   },
 });
